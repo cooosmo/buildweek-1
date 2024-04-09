@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benchmark Epicode</title>
-    <link rel="StyleSheet" href="./assets/css/style.css">
+    <title>Esame</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <img src="./assets/img/epicode_logo.png" alt="logo epicode" />
-    <main>
-        <div class="central">
-            <h1>Welcome to your exam</h1>
-            <h2>Instructions</h2>
-            <p>We don't expect most engineers to know the answers to all of these questions, so don't worry if you're unsure
-                of a few of them.</p>
-            <ul>
-                <li>Each question is timed and can only be answered once.
-                </li>
-                <li>Changing browser tab or opening other windows will invalidate the question.
-                </li>
-                <li>This exam will take approx. 0-5 minutes.
-                </li>
-            </ul>
+    <img src="./assets/css/img/epicode_logo.png" alt="logoepicode" id="logo" />
+    <h2>Welcome to <b>your exam</b></h2>
+    <h4>Instructions</h4>
+    <p>We don't expect most engineers to know the answers to all of these questions, so don't worry if you're unsure of
+        a few of them.
+    </p>
+    <ul>
+        <li>Each question is timed and can only be answered once.
+        </li>
+        <li>Changing browser tab or opening other windows will invalidate the question.
+        </li>
+        <li>This exam will take approx. 0-5 minutes.
+        </li>
+    </ul>
+    <div>
+        <div>
+            <input type="checkbox" id="coding" name="interest"
+                value="I promise to answer myself without help from anyone" />
+            <label for="coding">I promise to answer myself without help from anyone</label>
         </div>
-        <div class="flex">
-            <p><input type="checkbox" id="bw-checkbox">I promise to answer myself without help from anyone</p>
-            <button id="bw-button" disabled>PROCEED</button>
-        </div>
-    </main>
-<script src="./assets/script/script.js"></script>
+        <button tpe="button" value="PROCEED">PROCEED</button>
+    </div>
 </body>
+
 </html>

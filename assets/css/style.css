@@ -1,24 +1,28 @@
-img {
-    max-width: 20%;
-    padding-left: 20%;
-}
-
-main {
-    padding-left: 20%;
-    padding-top: 5%;
-}
-
-.central {
-    max-width: 70%;
-}
-
-.flex{
-    display: flex;
-    max-width: 70%;
-    justify-content: space-between;
-}
-
-/*body {
-    background-image: url("/assets/img/bg.jpg");
+body {
+    margin: 0;
+    background: url(./img/bg.jpg);
     background-size: cover;
-}*/
+    background-position: center;
+    color: white;
+    padding-left: 70px;
+    padding-top: 10px;
+}
+
+h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+}
+
+b {
+    display: block;
+}
+
+h4 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+}
+
+#logo {
+    width: 150px;
+}

@@ -97,16 +97,3 @@
         incorrect_answers: ["Python", "C", "Jakarta"],
       },
     ];
-
-    const BWCheck = document.getElementById("bw-checkbox")
-    const BWB = document.getElementById("bw-button")
-    
-    BWCheck.addEventListener("change", function() {
-        if (BWCheck.checked) {
-          BWB.disabled = false;
-        } else {
-            BWB.disabled = true;
-        }
-    })
-
-   
