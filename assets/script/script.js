@@ -109,4 +109,71 @@
         }
     })
 
-   
+   function mostraDomande () {
+    let index = 1
+    let punteggio = 0
+    //const headingUno = document.querySelector("h2") //poi prendere con id ?!
+    const TEXT = document.getElementById("text")
+
+    for (let question of questions) {
+      const DOMANDA = question.question
+      
+      const HEADINIG = document.createElement("h2")// //crea un titolo per ogni domanda
+      //NOI DOBBIAMO FARE NO CREA UN TITOLO PER OGNI DOMANDA MA CAMBIA l'inner.Text per ogni domanda 
+      //console.log(domanda)
+      HEADINIG.innerText = DOMANDA
+      
+      TEXT.appendChild(HEADINIG)
+      console.log(TEXT)
+        const CORRECT = question.correct_answer
+        const OPZIONI = question.incorrect_answers
+        OPZIONI.push(CORRECT)
+
+        for(let opzione of OPZIONI) {
+          const RADIO = document.createElement("input")
+          const LABEL = document.createElement("label")
+          RADIO.setAttribute("type", "radio")
+          RADIO.setAttribute("value", opzione)
+          LABEL.setAttribute("for", opzione)
+          LABEL.innerText = opzione
+          TEXT.appendChild(RADIO)
+          TEXT.appendChild(LABEL)
+        }
+    }
+
+    /*for ( let question of questions) {
+      const domanda = question.question
+      //let risposte = []
+      const correct = question.correct_answer
+      //console.log(correct)
+      const opzioni = question.incorrect_answers
+      opzioni.push(correct)
+      
+      
+      headingUno.innerText = domanda
+      console.log(domanda)
+      const TEXT = document.getElementById("text")
+      for ( let opzione of opzioni) {
+        const radio = document.createElement("input")
+        const label = document.createElement("label")
+        
+        radio.setAttribute("type", "radio")
+        radio.setAttribute("value", domanda)
+        label.setAttribute("for", opzione)
+        label.innerText = opzione
+        console.log(opzione)
+        //console.log(radio, label)
+        TEXT.appendChild(radio)
+        TEXT.appendChild(label)
+      }
+
+      
+      
+      //risposte.push(correct)
+     
+
+
+    }
+    */
+   }
+   mostraDomande()
