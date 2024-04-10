@@ -16,7 +16,7 @@
 
 <body>
     <img src="./assets/css/img/epicode_logo.png" alt="logoepicode" id="logo" />
-    <h2>Welcome to <b>your exam</b></h2>
+    <h2>Welcome to <span>your exam</span></h2>
     <h4>Instructions</h4>
     <p>We don't expect most engineers to know the answers to all of these questions, so don't worry if you're unsure of
         a few of them.
@@ -29,14 +29,16 @@
         <li>This exam will take approx. 0-5 minutes.
         </li>
     </ul>
-    <div>
-        <div>
-            <input type="checkbox" id="coding" name="interest"
-                value="I promise to answer myself without help from anyone" />
-            <label for="coding">I promise to answer myself without help from anyone</label>
+    <div class="footer">
+        <div class="flex">
+            <div class="check">
+                <input type="checkbox" id="bw-checkbox" value="" />
+                <label for="bw-checkbox">Promise to answer myself without help from anyone</label>
+            </div>
+            <button id="bw-button" disabled>PROCEED</button>
         </div>
-        <button tpe="button" value="PROCEED">PROCEED</button>
     </div>
+    <script src="assets/script/script.js" defer></script>
 </body>
 
 </html>

@@ -1,10 +1,14 @@
+* {
+    margin: 0;
+}
+
 body {
     margin: 0;
     background: url(./img/bg.jpg);
     background-size: cover;
     background-position: center;
     color: white;
-    padding-left: 70px;
+    padding-left: 100px;
     padding-top: 10px;
 }
 
@@ -12,17 +16,52 @@ h2 {
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     font-size: 60px;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
-b {
+span {
     display: block;
+    font-weight: bold;
 }
 
 h4 {
     font-family: "Outfit", sans-serif;
-    font-weight: 500;
+    font-weight: bold;
+    color: #D20094;
+    font-size: 30px;
+    padding-bottom: 10px;
 }
 
 #logo {
     width: 150px;
+    padding-top: 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 100px;
+    align-items: center;
+}
+
+p {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 450px;
+    padding-bottom: 30px;
+}
+
+ul {
+    padding-inline-start: 20px;
+}
+
+.footer {
+    padding-top: 60px;
+}
+
+#bw-button {
+    padding: 10px 30px;
+    font-size: large;
+    font-weight: bold;
 }
