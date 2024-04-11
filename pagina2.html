@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 2</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="StyleSheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/img/epicode_logo.png" alt="logo_epicode" id="logo">
+        <div>timer</div>
+    </header>
+    <main class="app">
+        <h1 id="question"></h1>
+        <div id="answerButtons">
+            <button class="btn"> Answer 1 </button>
+            <button class="btn"> Answer 2 </button>
+            <button class="btn"> Answer 3 </button>
+            <button class="btn"> Answer 4 </button>
+        </div>
+        <button id="nextButton" onclick="prossimaDomanda()">Next</button>
+        <footer>
+            <p id="questionCount"></p>
+            <p id="quiz-container"></p>
+        </footer>
+    </main>
+    <script src="assets/script/script.js"></script>
+</body>
+</html>

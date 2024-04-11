@@ -99,12 +99,59 @@
     ];
 
 const BWCheck = document.getElementById("bw-checkbox")
-const BWB = document.getElementById("bw-button")
+const BWB = document.getElementById("bw-button");
     
-BWCheck.addEventListener("change", function() {
+document.addEventListener('change', function() {
   if (BWCheck.checked) {
     BWB.disabled = false;
   } else {
     BWB.disabled = true;
   }
-})
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  BWB.addEventListener('click', function() {
+    window.location.href = "pagina2.html";
+  });
+});
+
+
+let index = 0;
+let punteggio = 0;
+
+function mostraDomanda() {
+  const currentQuestion = questions[index];
+  let showQuestion = document.getElementById("question")
+  showQuestion.innerText = `${currentQuestion.question + 1}`
+  let contatoreDomanda = document.getElementById("questionCount")
+  contatoreDomanda.innerText = `Question ${index + 1}/${questions.length}`
+
+
+  let answersHTML = "";
+  answersHTML += `<button onclick="checkAnswer(true)">${currentQuestion.correct_answer}</button>`;
+  currentQuestion.incorrect_answers.forEach(answer => {
+    answersHTML += `<button onclick="checkAnswer(false)">${answer}</button>`;
+  });
+  document.getElementById("answerButtons").innerHTML = answersHTML;
+}
+
+function checkAnswer(isCorrect) {
+  if (isCorrect) {
+    punteggio++;
+  }
+}
+
+function prossimaDomanda() {
+  index++;
+  if (index < questions.length) {
+    mostraDomanda();
+  } else {
+    mostraRisultato();
+  }
+}
+
+function mostraRisultato() {
+  document.getElementById("quiz-container").innerHTML = `<p>Punteggio finale: ${punteggio}/${questions.length}</p>`;
+}
+
+mostraDomanda();
