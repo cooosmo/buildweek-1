@@ -124,7 +124,7 @@ const currentQuestion = questions[index];
 let showQuestion = document.getElementById("question")
 showQuestion.innerText = `${currentQuestion.question}`
 let contatoreDomanda = document.getElementById("questionCount")
-contatoreDomanda.innerText = `Question ${index + 1}/${questions.length}`
+contatoreDomanda.innerText = `${index + 1}`
 
 
 let answersHTML = "";
