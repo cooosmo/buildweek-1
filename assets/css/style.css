@@ -47,6 +47,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
 }
 
@@ -58,7 +59,7 @@ h1 {
 }
 
 #benchmark h1 {
-    max-width:50%;
+    max-width:55%;
 }
 
 h2 {

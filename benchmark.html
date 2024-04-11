@@ -19,9 +19,9 @@
     </header>
     <main class="container">
         <div id="question-wrapper">
-            <h1>How can I create a checkbox in HTML?</h1>
-            <div id="options">
-                <div class="option">
+            <h1 id="question">How can I create a checkbox in HTML?</h1>
+            <div class="options" id="answerButtons">
+                <!-- <div class="option">
                     <input type="radio" value="option1" id="option1">
                     <label for="option1">Option1</label>
                 </div>
@@ -36,16 +36,22 @@
                 <div class="option">
                     <input type="radio" value="option4" id="option4">
                     <label for="option4">Option4</label>
-                </div>
+                </div> -->
+                <button class="btn"> Answer 1 </button>
+                <button class="btn"> Answer 2 </button>
+                <button class="btn"> Answer 3 </button>
+                <button class="btn"> Answer 4 </button>
             </div>
+            <button id="nextButton" onclick="prossimaDomanda()">Next</button>
         </div>
-        
-        
-        
             
        
     </main>
-    <footer class="container"><p>QUESTION <span id="indexPagina">1</span> <span class="secondary-color">/ 10</span></p></footer>
+    </main>
+    <footer class="container">
+        <p>QUESTION <span id="questionCount">1</span> <span class="secondary-color">/ 10</span></p>
+        <p id="quiz-container"></p>
+    </footer>
 
     <script src="./assets/script/script.js"></script>
     
