@@ -122,7 +122,7 @@ let punteggio = 0;
 function mostraDomanda() {
   const currentQuestion = questions[index];
   let showQuestion = document.getElementById("question")
-  showQuestion.innerText = `${currentQuestion.question + 1}`
+  showQuestion.innerText = `${currentQuestion.question}`
   let contatoreDomanda = document.getElementById("questionCount")
   contatoreDomanda.innerText = `Question ${index + 1}/${questions.length}`
 
