@@ -10,20 +10,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="StyleSheet" href="/style.css">
+    <link rel="StyleSheet" href="./assets/css/style.css">
 </head>
-<body>
-    <header>
-        <img src="./assets/img/epicode_logo.png" alt="logo epicode">
-        <div id="timer">timer</div>
+<body id="benchmark">
+    <header class="container">
+        <img src="./assets/img/epicode_logo.png" alt="logo epicode" />
+        <p id="timer"><span class="timer-head">seconds</span><span class="seconds">16</span><span class="timer-footer">remaining</span></p>
     </header>
-    <main>
-        <h2>How can I create a checkbox in HTML?</h2>
+    <main class="container">
+        <div id="question-wrapper">
+            <h1>How can I create a checkbox in HTML?</h1>
+            <div id="options">
+                <div class="option">
+                    <input type="radio" value="option1" id="option1">
+                    <label for="option1">Option1</label>
+                </div>
+                <div class="option">
+                    <input type="radio" value="option2" id="option2">
+                    <label for="option2">Option2</label>
+                </div>
+                <div class="option">
+                    <input type="radio" value="option3" id="option3">
+                    <label for="option3">Option3</label>
+                </div>
+                <div class="option">
+                    <input type="radio" value="option4" id="option4">
+                    <label for="option4">Option4</label>
+                </div>
+            </div>
+        </div>
         
-        <footer>
-            <p>QUESTION <span id="indexPagina">1</span> <span class="secondary-color">/ 10</span></p>
-        </footer>
+        
+        
+            
+       
     </main>
+    <footer class="container"><p>QUESTION <span id="indexPagina">1</span> <span class="secondary-color">/ 10</span></p></footer>
 
     <script src="./assets/script/script.js"></script>
     
