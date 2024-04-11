@@ -151,12 +151,8 @@ function prossimaDomanda() {
 }
 
 function mostraRisultato() {
-  for (let i = 0; i <= questions.length; i++) {
-    if(i === punteggio){
     let mostraPunteggio = document.getElementById("quiz-container")
     mostraPunteggio.innerHTML = `<p>Punteggio finale: ${punteggio}/${questions.length}</p>`;
-    } return
-  }
 }
 
 mostraDomanda();
