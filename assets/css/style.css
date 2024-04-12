@@ -181,3 +181,123 @@ footer {
 .secondary-color {
     color:#900080;
 }
+
+/* TIMER */
+
+
+#time {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* contenitore timer */
+
+
+.main-container {
+    width: 100%;
+    /*height: 100vh;*/
+    /*background-color: white;*/
+    font-family: "Outfit", sans-serif;
+}
+
+/* cerchio timer */
+
+.circle-container {
+    width: 200px;
+    height: 200px;
+    background-color: #00FFFF;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* classe semicerchi */
+
+.semicircle {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right center;
+}
+
+
+.semicircle:nth-child(1) {
+    background-color: red;
+    background-color: #96689b;
+    z-index: 2;
+}
+
+.semicircle:nth-child(2) {
+    background-color: blue;
+    background-color: #96689b;
+    z-index: 3;
+}
+
+
+.semicircle:nth-child(3) {
+    background-color: #00FFFF;
+    z-index: 4;
+}
+
+.outermost-circle {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(90deg, rgba(54,20,72,1) 0%, rgba(102,39,110,1) 100%);
+    border-radius: 50%;
+    z-index: 5;
+    /* display: none; */
+}
+
+
+.timer-container {
+    /*width: 330px;*/
+    height: 180px;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+}
+
+.timer {
+    width: 200px;
+    height: 50px;
+    z-index: 7;
+    color: white;
+}
+
+.timer div {
+    font-size: 50px;
+    font-weight: 300;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer .colon {
+    background-color: transparent;
+    width: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 15px;
+}
+
+#secondsText {
+    color: white;
+    font-size: 20px;
+}
+
+#remainingText {
+    color: white;
+    font-size: 20px;
+}

@@ -15,7 +15,23 @@
 <body id="benchmark">
     <header class="container">
         <img src="./assets/img/epicode_logo.png" alt="logo epicode" />
-        <p id="timer"><span class="timer-head">seconds</span><span class="seconds">16</span><span class="timer-footer">remaining</span></p>
+        <div id="time">
+            <div class="main-container center">
+              <!-- progress indicator-->
+              <div class="circle-container center">
+                <div class="semicircle"></div>
+                <div class="semicircle"></div>
+                <div class="semicircle"></div>
+                <div class="outermost-circle"></div>
+              </div>
+              <!-- timer-->
+              <div class="timer-container center">
+                <div id="secondsText">SECONDS</div>
+                <div class="timer center"></div>
+                <div id="remainingText">REMAINING</div>
+              </div>
+            </div>
+          </div>
     </header>
     <main class="container">
         <div id="question-wrapper">

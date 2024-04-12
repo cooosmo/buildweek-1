@@ -112,6 +112,7 @@ BWB.disabled = true;
 document.addEventListener('DOMContentLoaded', function() {
 BWB.addEventListener('click', function() {
 window.location.href = "pagina2.html";
+
 });
 });
 
@@ -136,15 +137,19 @@ document.getElementById("answerButtons").innerHTML = answersHTML;
 }
 
 function checkAnswer(isCorrect) {
+  
 if (isCorrect) {
 punteggio++;
 }
 }
 
+
+
 function prossimaDomanda() {
 index++;
 if (index < questions.length) {
 mostraDomanda();
+
 } else {
 mostraRisultato();
 }
@@ -156,3 +161,103 @@ mostraPunteggio.innerHTML = `<p>Punteggio finale: ${punteggio}/${questions.lengt
 }
 
 mostraDomanda();
+const semicircles = document.querySelectorAll('.semicircle');
+const timer = document.querySelector('.timer')
+
+function startQuizLoop() {
+//input
+const hr = 0
+const min = 0
+const sec = 30
+
+const hours = hr * 3600000
+const minutes = min * 60000
+const seconds = sec * 1000;
+
+const setTime = hours + minutes + seconds;
+
+const startTime = Date.now();
+
+const futureTime = startTime + setTime;
+
+const timerLoop = setInterval(countDownTimer);
+
+
+// funzione del countdown
+countDownTimer();
+
+
+function countDownTimer () {
+
+  const currentTime = Date.now()
+  const remainingTime = futureTime - currentTime
+  const angle = ( remainingTime / setTime ) * 360
+
+  // progress indicator
+  if (angle > 180) {
+      semicircles[2].style.display = 'none';
+      semicircles[0].style.transform = `rotate(180deg)`
+      semicircles[1].style.transform = `rotate(${angle}deg)`
+  } else {
+      semicircles[2].style.display = 'block';
+      semicircles[0].style.transform = `rotate(${angle}deg)`
+      semicircles[1].style.transform = `rotate(${angle}deg)`
+  }
+
+  // mostra il testo all'interno del timer
+
+  const secs = Math.floor((remainingTime / (1000)) % 60)
+
+  timer.innerHTML = 
+  `<div class="colon">${secs}</div>`
+
+
+
+   //5sec-condition
+
+   /*
+   if ( remainingTime <= 10000) {
+  semicircles[0].style.backgroundColor = "red"
+  semicircles[1].style.backgroundColor = "red"
+  timer.style.color = "red"
+  }
+  */
+
+
+
+   //end
+
+  //qui va inserito che quando remainingTime arriva a zero viene caricata una nuova domanda
+  if ( remainingTime < 0) {
+    clearInterval(timerLoop)
+
+    /*
+    semicircles[0].style.display = 'none'
+    semicircles[1].style.display = 'none'
+    semicircles[2].style.display = 'none'
+
+    /*
+    timer.innerHTML = 
+    `<div>0</div>`
+    */
+
+    // fa ripartire il loop
+    startQuizLoop()
+    prossimaDomanda()
+
+}
+ /* if ( remainingTime < 0) {
+      clearInterval(timerLoop)
+      semicircles[0].style.display = 'none'
+      semicircles[1].style.display = 'none'
+      semicircles[2].style.display = 'none'
+
+
+      timer.innerHTML = 
+      `<div>0</div>`
+      prossimaDomanda()
+    */
+  }
+
+}
+startQuizLoop()
