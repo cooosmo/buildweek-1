@@ -30,7 +30,6 @@ header {
     padding: 20px;
     position: absolute;
     top:0;
-    /* margin: 0 auto; */
     display: flex;
     justify-content: space-between;
 }
@@ -180,11 +179,11 @@ footer {
 
 /* TIMER */
 
-
 #time {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: -20px;
+    right: -20px;
+    transform: scale(0.5);
 }
 .center {
     display: flex;
