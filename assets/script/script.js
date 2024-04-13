@@ -164,7 +164,6 @@ function mostraRisultato() {
   finish = true
   disable()
 }
-<<<<<<< HEAD
 
 mostraDomanda()
 
@@ -234,6 +233,3 @@ nextButton.addEventListener('click', ()=>{
   prossimaDomanda(), clearInterval(timerLoop), startQuizLoop()
 })
 
-=======
-startQuizLoop()
->>>>>>> a20c4529d67beec5be0faf27e2eb1d3dee42c2a6
