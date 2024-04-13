@@ -115,6 +115,15 @@ questions.sort(() => Math.random() - 0.5)
 let index = 0
 let punteggio = 0
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+shuffleArray(questions);
+
 function mostraDomanda() {
   const currentQuestion = questions[index];
   let showQuestion = document.getElementById("question")
@@ -155,6 +164,7 @@ function mostraRisultato() {
   finish = true
   disable()
 }
+<<<<<<< HEAD
 
 mostraDomanda()
 
@@ -224,3 +234,6 @@ nextButton.addEventListener('click', ()=>{
   prossimaDomanda(), clearInterval(timerLoop), startQuizLoop()
 })
 
+=======
+startQuizLoop()
+>>>>>>> a20c4529d67beec5be0faf27e2eb1d3dee42c2a6
