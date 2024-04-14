@@ -18,7 +18,7 @@ body {
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 200;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,4 +295,56 @@ footer {
 #remainingText {
     color: white;
     font-size: 20px;
+}
+
+/* PAGINA REVIEW */
+.review-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 650px;
+}
+
+#review h1 {
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+#review p {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+#starsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.review-comment {
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: transparent;
+    border: unset;
+    border-bottom: 2px solid #900080;
+    padding: 5px 10px;
+}
+
+/* VALUTAZIONE STELLE */
+.star {
+    filter: saturate(0%) contrast(10%);
+    cursor: pointer;
+  }
+
+.star-blue {
+    filter: none;
+}
+
+.star-highlight {
+    /* Stili per l'effetto di evidenziazione */
+    filter: none;
 }
