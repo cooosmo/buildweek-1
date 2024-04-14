@@ -171,6 +171,14 @@ const questions = [
     correttePerc.innerHTML = `${calcoloPercCorrette} %`
     incorrettePerc.innerHTML = `${calcoloPercIncorrette} %`
 
+    let esito = document.querySelector('.esito p')
+
+    if(calcoloPercCorrette>0){
+        esito.innerHTML = "<small><small>Congratulations\! You passed the exam\.We\'ll send you the certificate in few minutes\.Check your email \(including promotions / spam folder\)</small></small>"
+    } else {
+        esito.innerHTML = "<small><small>Spiaze! You didn't pass the exam.</small></small>"
+    }
+
     finish = true
    
   
@@ -187,7 +195,7 @@ const questions = [
               '#00FFFF',
               '#D20094'
           ],
-          borderWidth: 1
+          borderWidth: .5
       }]
   };
   

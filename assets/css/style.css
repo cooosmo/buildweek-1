@@ -323,6 +323,19 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+}
+
+.esito {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.esito p {
+    max-width: 150px;
+    text-align: center;
 }
 
 
