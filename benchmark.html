@@ -51,9 +51,28 @@
         <p>QUESTION <span id="questionCount">1</span> <span class="secondary-color">/ 10</span></p>
         <p id="quiz-container"></p>
     </footer>
-    <div class="quizChart"> 
+    <div class="quizChart">
+        <h1>Results</h1>
+        <p>The summary of your answers:</p>
+        <div id="resultsContainer">
 
-        <canvas  id="quizChart" width="400" height="400"></canvas>
+            <div id="correctContainer">
+                <h2>Correct</h2>
+                <p id="corrette">qui va a prendere la percentuale</p>
+                <p><span></span>/totale domande questions</p>
+            </div>
+
+            <canvas  id="quizChart" width="400" height="400"></canvas>
+
+            <div id="wrongContainer">
+                <h2>Wrong</h2>
+                <p id="incorrette">qui va a prendere la percentuale</p>
+                <p>/totale domande questions</p>
+            </div>
+
+        </div>
+
+        
         <a href="review.html"> <button class="next">avanti</button> </a>
     </div>
 

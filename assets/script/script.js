@@ -134,7 +134,7 @@ const questions = [
   function checkAnswer(isCorrect) {
     if (isCorrect) {
         punteggio++
-        console.log(punteggio)
+        //console.log(punteggio)
         return punteggio
      
     }
@@ -152,25 +152,40 @@ const questions = [
   let chart = document.querySelector(".quizChart")
   let timerLoop
   let finish = false
+  
+
   function mostraRisultato() {
     let mostraPunteggio = document.getElementById("quiz-container")
     //mostraPunteggio.innerHTML = `<p>Punteggio finale: ${punteggio}/${questions.length}</p>`
     chart.classList.add("visible")
+
+    let incorrect = questions.length - punteggio
+    let correttePerc = document.querySelector('p#corrette')
+    let incorrettePerc = document.querySelector('p#incorrette')
+
+    let calcoloPercCorrette = (punteggio/10)*100
+    console.log(calcoloPercCorrette)
+    let calcoloPercIncorrette = (incorrect/10)*100
+    console.log(calcoloPercIncorrette)
+
+    correttePerc.innerHTML = `${calcoloPercCorrette} %`
+    incorrettePerc.innerHTML = `${calcoloPercIncorrette} %`
+
     finish = true
    
   
-    let incorrect = questions.length - punteggio
+    
   var quizData = {
-      labels: ['Risposte Giuste', 'Risposte Sbagliate'],
+      //labels: ['Risposte Giuste', 'Risposte Sbagliate'],
       datasets: [{
           data: [punteggio, incorrect], 
           backgroundColor: [
-              'rgba(75, 192, 192, 0.5)',
-              'rgba(255, 99, 132, 0.5)'  
+              '#00FFFF',
+              '#D20094'  
           ],
           borderColor: [
-              'rgba(75, 192, 192, 1)',
-              'rgba(255, 99, 132, 1)'
+              '#00FFFF',
+              '#D20094'
           ],
           borderWidth: 1
       }]
