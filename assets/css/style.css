@@ -97,6 +97,7 @@ button.proceed {
     font-size: 1,5rem;
     box-shadow: 0 0 0 0 #00ffff;
     transition: all .5s ease-in-out;
+    cursor: pointer;
 }
 
 
@@ -295,6 +296,24 @@ footer {
 #remainingText {
     color: white;
     font-size: 20px;
+}
+
+.quizChart {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background-image: url("../img/bg.jpg");
+    z-index: -10;
+    opacity: 0;
+    background-size: cover;
+}
+
+.quizChart.visible {
+    z-index: 10;
+    opacity: 1;
 }
 
 /* PAGINA REVIEW */
