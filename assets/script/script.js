@@ -204,7 +204,7 @@ const questions = [
           borderWidth: 1
       }]
   };
-  
+
   
   var chartOptions = {
       responsive: false,
